@@ -33,10 +33,18 @@
         <script>
             var srcs = [
                 'img/sadphantom1.png',
+                'img/sadphantom2.png',
             ]
             var randomChoice = function(array) { return array[Math.floor(Math.random()*array.length)] }
-            document.getElementById('danny').src = randomChoice(srcs);
-            bite.play();
+            var danny = document.getElementById('danny')
+            danny.src = randomChoice(srcs);
+            danny.addEventListener('load', function() {
+                var bite = document.getElementById('bite');
+                bite.play();
+            });
+            if (danny.complete) {
+                danny.dispatchEvent(new Event('load'));
+            }
         </script>
     </body>
 </html>
