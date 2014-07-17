@@ -3,9 +3,23 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Sad Danny Phantom</title>
         <meta name="description" content="Sad Danny Phantom... For the times you need that Danny Phantom sound bite.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- for Facebook -->          
+        <meta property="og:title" content="Sad Danny Phantom" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="http://sadphantom.com/img/thumb.png" />
+        <meta property="og:url" content="http://sadphantom.com" />
+        <meta property="og:description" content="Sad Danny Phantom... For the times you need that Danny Phantom sound bite." />
+
+        <!-- for Twitter -->          
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Sad Danny Phantom" />
+        <meta name="twitter:description" content="Sad Danny Phantom... For the times you need that Danny Phantom sound bite." />
+        <meta name="twitter:image" content="http://sadphantom.com/img/thumb.png" />
+        
         <style>
             html {
                 height: 100%;
@@ -16,9 +30,32 @@
                 height: 100%;
                 background: #000;
                 text-align: center;
+                font-family: Helvetica;
             }
-            #danny {
-                height: 100%;
+            .bar {
+                color: #FFF;
+                position: absolute;
+            }
+            .bar.social {
+                bottom: 1em;
+                left: 1em;
+            }
+            .bar.other {
+                bottom: 1em;
+                right: 1em;
+            }
+            a:visited {
+                color: inherit;
+            }
+            @media (max-width: 640px) {
+                #danny {
+                    width: 100%;
+                }
+            }
+            @media (min-width: 640px) {
+                #danny {
+                    height: 100%;
+                }
             }
         </style>
     </head>
@@ -29,6 +66,15 @@
             <source src="snd/bite.mp3" />
             <source src="snd/bite.ogg" />
         </audio>
+
+        <div class="bar social">
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsadphantom.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="width: 80px; border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://sadphantom.com">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="bar other">
+            <a href="https://github.com/sadphantom/sadphantom.github.io/wiki/Suggest-an-image">Suggest an image</a>
+        </div>
 
         <script>
             var srcs = [
